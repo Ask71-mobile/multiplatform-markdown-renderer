@@ -110,3 +110,15 @@ val LocalMarkdownComponents = compositionLocalOf<MarkdownComponents> {
 val LocalMarkdownAnimations = compositionLocalOf<MarkdownAnimations> {
     error("No local MarkdownAnimations")
 }
+
+/**
+ * Local fade effect configuration provider
+ */
+data class MarkdownFadeConfig(
+    val enabled: Boolean = false,
+    val fadeLength: Int = 20
+)
+
+val LocalMarkdownFadeConfig = staticCompositionLocalOf {
+    MarkdownFadeConfig()
+}
