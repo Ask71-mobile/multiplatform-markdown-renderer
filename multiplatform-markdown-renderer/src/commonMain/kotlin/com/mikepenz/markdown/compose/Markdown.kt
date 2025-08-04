@@ -61,7 +61,7 @@ import org.intellij.markdown.parser.MarkdownParser
  * @param content The markdown content string to be rendered.
  * @param colors The color scheme to be used for rendering different markdown elements.
  * @param typography The typography settings to be used for text rendering.
- * @param modifier The modifier to be applied to the container. Defaults to [Modifier.fillMaxSize].
+ * @param modifier The modifier to be applied to the container.
  * @param padding The padding configuration to be applied to different markdown elements.
  * @param dimens The dimension settings for spacing and sizing of markdown elements.
  * @param flavour The markdown flavor descriptor for parsing. By default uses GitHub Flavored Markdown (GFM).
@@ -85,7 +85,7 @@ fun Markdown(
     content: String,
     colors: MarkdownColors,
     typography: MarkdownTypography,
-    modifier: Modifier = Modifier.fillMaxSize(),
+    modifier: Modifier = Modifier,
     padding: MarkdownPadding = markdownPadding(),
     dimens: MarkdownDimens = markdownDimens(),
     flavour: MarkdownFlavourDescriptor = GFMFlavourDescriptor(),
@@ -155,7 +155,7 @@ fun Markdown(
  * @param markdownState A [MarkdownState] object that manages the parsing and state of the markdown content.
  * @param colors The color scheme to be used for rendering different markdown elements.
  * @param typography The typography settings to be used for text rendering.
- * @param modifier The modifier to be applied to the container. Defaults to [Modifier.fillMaxSize].
+ * @param modifier The modifier to be applied to the container.
  * @param padding The padding configuration to be applied to different markdown elements.
  * @param dimens The dimension settings for spacing and sizing of markdown elements.
  * @param imageTransformer The transformer for handling and loading images within markdown content.
@@ -178,7 +178,7 @@ fun Markdown(
     markdownState: MarkdownState,
     colors: MarkdownColors,
     typography: MarkdownTypography,
-    modifier: Modifier = Modifier.fillMaxSize(),
+    modifier: Modifier = Modifier,
     padding: MarkdownPadding = markdownPadding(),
     dimens: MarkdownDimens = markdownDimens(),
     imageTransformer: ImageTransformer = NoOpImageTransformerImpl(),
@@ -243,7 +243,7 @@ fun Markdown(
  * @param state A [State] object representing the current state of the markdown content (loading, success, or error).
  * @param colors The color scheme to be used for rendering different markdown elements.
  * @param typography The typography settings to be used for text rendering.
- * @param modifier The modifier to be applied to the container. Defaults to [Modifier.fillMaxSize].
+ * @param modifier The modifier to be applied to the container.
  * @param padding The padding configuration to be applied to different markdown elements.
  * @param dimens The dimension settings for spacing and sizing of markdown elements.
  * @param imageTransformer The transformer for handling and loading images within markdown content.
@@ -268,7 +268,7 @@ fun Markdown(
     state: State,
     colors: MarkdownColors,
     typography: MarkdownTypography,
-    modifier: Modifier = Modifier.fillMaxSize(),
+    modifier: Modifier = Modifier,
     padding: MarkdownPadding = markdownPadding(),
     dimens: MarkdownDimens = markdownDimens(),
     imageTransformer: ImageTransformer = NoOpImageTransformerImpl(),
