@@ -251,10 +251,11 @@ private fun animateFadeOutRemoval(
 
     // Detect when streaming stops
     LaunchedEffect(text.length) {
-        if (text.length != lastContentLength) {
-            lastContentLength = text.length
-            isStreaming = true
-            delay(25) // Wait see if more content arrives
+        lastContentLength = text.length
+        isStreaming = true
+        delay(100) // Wait to see if more content arrives
+        // Only set streaming to false if no new content arrived during the delay
+        if (text.length == lastContentLength) {
             isStreaming = false
         }
     }
